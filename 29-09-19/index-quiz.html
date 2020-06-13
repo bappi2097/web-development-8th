@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			p{
+				color: 2px black;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>Select Your Campus</h4></br>
+		<select id="op">
+			<option value="Main" id="mc">Main Campus</option>
+			<option value="Permanant" id ="pc">Permanant Campus</option>
+		</select></br>
+		<h4>Enter CGPA</h4>
+		<input type="text" placeholder="SGPA of last semester" id="cgpa"/></br>
+	
+		Do You Want To Know How Much You Need To Pay?</br>
+		<input type="checkbox" name="" id="ckbxpay" onclick="payClick()">Yes<br>
+		<h4>Enter Total Amount Shown on Student Portal</h4><br>
+		<input type="text" id="amount" disabled/></br>
+		Do you have previous scholarship on your H.Sc result?<br>
+		<input type="radio" name="result" id="rsltYes">Yes<br>
+		<input type="radio" name="result" id="rsltNo">No<br>
+		<h4>If Yes then how much?(In percentage)</h4>
+
+ 		<script type="text/javascript">
+			//var enableDisable=function(){
+			//	if(document.getElementById('agree').
+			//	checked){
+			//		document.getElementById('email').
+			//		disabled= false;
+			//	}
+			//	else{
+			//		document.getElementById('email'). 
+			//		disabled=true;
+			//		document.getElementById('email').value="";
+			//		document.getElementById('confirmEmail').style="display:none";
+			//	}
+			//	function hideShow(){
+			//	document.getElementById('confirmEmail').style="display:block";
+			//} 
+			var payClick=function(){
+				if(document.getElementById("ckbxpay").checked){
+					document.getElementById("amount").disabled=false;
+				}
+				else document.getElementById("amount").disabled=true;	
+			}
+			function scholarshipCal(){
+				var selector=document.getElementById("op");
+				var value=selector[selector.selectedIndex].value;
+			}
+
+		</script>
+	</body>
+</html>

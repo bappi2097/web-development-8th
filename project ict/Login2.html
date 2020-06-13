@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Parent</title>
+	<style type="text/css">
+		body{
+			background-image: url('nature.jpg');
+			background-size: cover;
+		}
+		.loginMainDiv{
+			width: 50%;
+			padding: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: white;
+			opacity: .8;
+			border-radius: 20px;
+			text-align: center;
+		}
+		#userimg{
+			border-radius:100%;
+			top: -40%;
+			left: 45%;
+			width: 10%;
+			height: 70%;
+			position: absolute;
+		}
+		#email,#password{
+			margin: 2px;
+			border:none;
+			border-bottom: solid;
+			border-bottom-color: yellow;
+		}
+		#login{
+			background:yellow;
+			color: black;
+			text-align: center;
+			padding: 1px 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="loginMainDiv">
+		<img id="userimg" src="img_avatar2.png">
+		<input type="email" id="email" name="" placeholder="Enter email"><br>
+		<input type="password" id="password" name="" placeholder="Type Your Password"><br>
+		<span id="forpassword">Forgot Password?</span>
+		<a id="register" href="Register.html">Register</a><br>
+		<input type="submit" name="" id="login" value="Login">
+	</div>
+</body>
+</html>

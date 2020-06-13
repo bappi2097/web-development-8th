@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>29-09-19:2</title>
+</head>
+<body>
+	<input type="checkbox" class="ckbx" name="ckbx" value="1">No 1<br>
+	<input type="checkbox" class="ckbx" name="ckbx" value="2">No 2<br>
+	<input type="checkbox" class="ckbx" name="ckbx" value="3">No 3<br>
+	<input type="checkbox" class="ckbx" name="ckbx" value="4">No 4<br>
+	<input type="checkbox" class="ckbx" name="ckbx" value="5">No 5<br>
+	<input type="checkbox" class="ckbx" name="ckbx" value="6">No 6<br>
+	<input type="button" name="" value="Sum"  onclick="myfunc()">
+	<input type="text" id="text"  name="">
+	<script type="text/javascript">
+		var myfunc=function(){
+			var size=document.getElementsByName("ckbx");
+			var val=0;
+			var arr=[];
+			for(var i=0;i<size.length;i++){
+				if(size[i].checked){
+					arr.push(size[i].value);
+					console.log(size[i].value);
+					val+=Number(size[i].value);
+				}
+
+			}
+			console.log(val);
+			console.log(arr1);
+			document.getElementById("text").value=val;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SGPA calculation</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+	Course Code 1<input type="text" name="" id="courseCode1" ><br><br>
+	Course Credit 1<input type="text" name="" id="courseCredit1"><br><br>
+	Course GPA 1<input type="text" name="" id="courseGPA1"><br><br>
+	Course Code 2<input type="text" name="" id="courseCode2" ><br><br>
+	Course Credit 2<input type="text" name="" id="courseCredit2"><br><br>
+	Course GPA 2<input type="text" name="" id="courseGPA2"><br><br>
+	Course Code 3<input type="text" name="" id="courseCode3" ><br><br>
+	Course Credit 3<input type="text" name="" id="courseCredit3"><br><br>
+	Course GPA 3<input type="text" name="" id="courseGPA3"><br><br>
+	<input type="submit" name="" title="Submit" onclick="myfunc()">
+	<div id="result">
+		
+	</div>
+	<script type="text/javascript">
+		var myfunc=function()
+		{
+			var ccd1=document.getElementById('courseCode1').value;
+			console.log(ccd1);
+			var cc1=document.getElementById('courseCredit1').value;
+			console.log(cc1);
+			var cg1=document.getElementById('courseGPA1').value;
+			console.log(cg1);
+			var ccd2=document.getElementById('courseCode2').value;
+			console.log(ccd2);
+			var cc2=document.getElementById('courseCredit2').value;
+			console.log(cc2);
+			var cg2=document.getElementById('courseGPA2').value;
+			console.log(cg2);
+			var ccd3=document.getElementById('courseCode3').value;
+			console.log(ccd3);
+			var cc3=document.getElementById('courseCredit3').value;
+			console.log(cc3);
+			var cg3=document.getElementById('courseGPA3').value;
+			console.log(cg3);
+			var SGPA=Number(cc1)*Number(cg1)+Number(cc2)*Number(cg2)+Number(cc3)*Number(cg3);
+			SGPA/=Number(cc1)+Number(cc2)+Number(cc3);
+			console.log(SGPA);
+			//document.write(SGPA+"");
+			document.getElementById('result').innerHTML="<table>"
+										+"<tr>"
+											+"<th>Course Code</th>"
+											+"<th>Credit</th>"
+											+"<th>GPA</th>"
+										+"</tr>"
+										+"<tr>"
+											+"<td>"+ccd1+"</td>"
+											+"<td>"+cc1+"</td>"
+											+"<td>"+cg1+"</td>"
+										+"</tr>"
+										+"<tr>"
+											+"<td>"+ccd2+"</td>"
+											+"<td>"+cc2+"</td>"
+											+"<td>"+cg2+"</td>"
+										+"</tr>"
+										+"<tr>"
+											+"<td>"+ccd3+"</td>"
+											+"<td>"+cc3+"</td>"
+											+"<td>"+cg3+"</td>"
+										+"</tr>"
+										+"<tr>"
+											+"<td colspan='2'>SGPA</td>"
+											+"<td>"+parseFloat(SGPA).toFixed(2)+"</td>"
+										+"</tr>"
+									+"</table>";
+		}
+	</script>
+</body>
+</html>

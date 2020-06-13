@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body ><!--onload="function_test(1)"-->
+	<input type="button" name="" value="Alert" onclick="function_test(1)"/>
+	<input type="button" name="" value="Confirm" onclick="function_test(2)"/>
+	<input type="button" name="" value="User Input" onclick="function_test(3)"/>
+	<input type="button" name="" value="User Count" onclick="function_test(4)"/>
+	</br>
+	<input type="text" name="" id="val_get" value="User Count"/>
+	<input type="button" name="" value="Show Value" onclick="function_test(5)"/>
+	</br>
+	<p id="msg"></p>
+	<script type="text/javascript">
+		document.write("Welcome to Javascript");
+		var function_test=function(param){
+			if(param==1){
+				alert("Alert button Clicked");
+				location.reload(true);
+			}else if(param==2){
+				if(confirm("Are You Sure?")){
+					document.getElementById("msg").innerHTML="<span style="+"color:green"+">Confirmed</span>";
+				}else{
+					document.getElementById("msg").innerHTML="<span style="+"color:red"+">Not Confirmed</span>";
+				}
+			}else if(param==3){
+				var value=prompt("Enter a number:");
+				if (value=="") {
+					document.getElementById("msg").innerHTML="<span style="+'color:red;'+">Empty Input!</span>";
+				}else{
+					document.getElementById("msg").innerHTML="You have entered: "+value;
+				}
+			}else if(param==4){
+				document.getElementById("msg").innerHTML="";
+				for (var i = 0; i <6; i++) {
+					document.getElementById("msg").innerHTML+=(i+'</br>');
+				}
+			}else{
+				var val_get=document.getElementById("val_get").value;
+				document.getElementById("msg").innerHTML=val_get;
+			}
+		}
+	</script>
+</body>
+</html>

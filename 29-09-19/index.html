@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>29-09-19:1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+		
+		<h4>Do you want to enter your mail?</h4><br>
+		<input type="checkbox" name="" id="agree" onclick="myfunc()">Yes<br>
+		Email:<input type="email" name="" id="email" disabled="true" onchange="HiddenInput()"><br>
+		<span id="cemail" hidden="true">Confirm Email:<input type="email" name="" ><br></span>
+		<h4>Are you student?</h4><br>
+		<input type="checkbox" name="" id="sagree" onclick="fileInput()">Yes
+		<span id="fileInputField" hidden="false"></span>
+		<h4>Hidden</h4>
+		<input type="checkbox" name="" id="hagree" onclick="HiddenInput()">Yes<br>
+		<input type="text" name="" id="htext" hidden><br>
+	</div>
+	<script type="text/javascript">
+		var myfunc=function(){
+			//if checkbox is checked 'Yes' then text box will enable
+			if(document.getElementById("agree").checked)document.getElementById("email").disabled=false;
+			else {
+				document.getElementById("email").value="";
+				document.getElementById("cemail").value="";
+				document.getElementById("email").disabled=true;
+				document.getElementById("cemail").hidden=true;
+			}
+		}
+		var myfunc2=function(){
+			if(document.getElementById("agree").checked)document.getElementById("cemail").hidden=false;
+			else document.getElementById("cmail").hidden=true;
+		}
+		var fileInput=function(){
+			//if checkbox is checked 'Yes' then inputField will enable
+			if(document.getElementById("sagree").checked){
+				document.getElementById("fileInputField").hidden=false;
+				document.getElementById("fileInputField").innerHTML="<input type='file' name=''>";
+			}
+			else document.getElementById("fileInputField").hidden=true;
+		}
+		function HiddenInput(){
+				
+			if(document.getElementById("email").value==""){
+				document.getElementById("cemail").hidden=true;
+			}
+			else document.getElementById("cemail").hidden=false;
+		}
+
+	</script>
+</body>
+</html>

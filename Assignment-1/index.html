@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment-1</title>
+  <style>
+    body{
+      background-color: powderblue;
+    }
+    dt{
+      font:20px solid black;
+    }
+    dd{
+      font: 15px solid black;
+    }
+    .Topics{
+      position: absolute;
+      top:5%;
+      left: 40%;
+      background:white;
+      padding:10px 20px;
+      width:16%;
+      height:auto;
+    }
+    .UnorderList{
+    position:absolute;
+    background:#229954;
+    padding:10px 20px;
+    top:25%;
+    left:5%;
+    width:16%;
+    height:auto;
+    }
+    .OrderList{
+      position:absolute;
+      background:#229954;
+      padding:10px 20px;
+      top:25%;
+      left:40%;
+      width:16%;
+      height:auto;
+    }
+    .DescriptionList{
+      position:absolute;
+      background:#229954;
+      padding:10px 20px;
+      top:25%;
+      left: 79%;
+      width:16%;
+      height:auto;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="Topics">
+    <dl class="">
+      <dt>Assignment Topics</dt>
+      <dd>-Unorder List</dd>
+      <dd>-Order List</dd>
+      <dd>-Description List</dd>
+    </dl>
+  </div>
+  <!--Unorder List : This list is not numbering list and marked with bullets-->
+  <div class="UnorderList">
+    <!--It will start with <ul> tag -->
+    <h4>Unorder List</h4>
+    <ul>
+      <!--We can change bullets point style and we can use it on <ul> tag also !-->
+      <!--Like <ul style=" list-style-type : circle;"> -->
+      <li style=" list-style-type:circle;">Unorder List-1</li>
+      <li style=" list-style-type:disk;">Unorder List-2</li>
+      <li style=" list-style-type:square;">Unorder List-3</li>
+      <li style=" list-style-type:none;">Unorder List-3</li>
+    </ul>
+  </div>
+  <!--Order List : This list have numbering and we can use different type of numbering like a,A,1,i,I etc .-->
+  <div class="OrderList">
+    <!--It will start with <ol> tag -->
+    <h4>Order List</h4>
+    <ol type="a">
+      <!--We can change numbering style and we use it on <ol> tag -->
+      <li>Order List-1</li>
+      <li>Order List-1</li>
+      <li>Order List-1</li>
+      <li>Order List-1</li>
+    </ol>
+  </div>
+  <!--A description list is a list of terms, with a description of each term -->
+  <div class="DescriptionList"><!--Description List-->
+    <dl class="">
+      <dt>Discription List-1</dt><!--Description Tag-->
+      <dd>Discription List-1.1</dd><!--Description Data-->
+      <dt>Discription List-2</dt>
+      <dd>Discription List-2.1</dd>
+      <dd>Discription List-2.2</dd>
+    </dl>
+  </div>
+</body>
+</html>
