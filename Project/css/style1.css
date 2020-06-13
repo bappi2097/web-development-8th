@@ -1,0 +1,44 @@
+
+#menu
+{
+	position: absolute;
+	right: 0;
+	top: 6em;
+}
+
+#menu ul
+{
+	display: inline-block;
+}
+
+#menu li
+{
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+#menu li a, #menu li span
+{
+	display: inline-block;
+	margin-left: 1px;
+	padding: 1em 1.5em 1em 1.5em;
+	letter-spacing: 0.10em;
+	text-decoration: none;
+	font-size: 1em;
+	text-transform: uppercase;
+	outline: 0;
+	color: #FFF;
+}
+
+#menu li:hover a, #menu li.active a, #menu li.active span
+{
+	color:blue;
+}
+
+#menu .current_page_item a
+{
+	background: #1757ae;
+	border-radius: 30px;
+	color: #FFF;
+}

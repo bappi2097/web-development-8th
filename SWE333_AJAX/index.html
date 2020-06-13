@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+	</head>
+	<body>
+	
+	<button id="add_show" onclick="$('#add_data').slideDown();">Add New Data</button>
+	
+	<div id="add_data">
+		
+		
+    Student ID: <input type="text" id="student_id" name="student_id"><br>
+    Email:      <input type="email" id="email" name="email"><br>
+    Password:   <input type="password" id="password" name="password"><br>
+			    <input type="button" id="addData" name="addData" value="Send Data To Server">
+			    <input type="button" onclick="$('#add_data').slideUp();" value="Cancel">
+
+
+	
+	</div>
+	<div id="edit_data"></div></br>
+	<div id="show_data"></div>
+	
+	
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	</body>
+</html>
